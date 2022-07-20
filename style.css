@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap');
+
+
+/**
+* ! Generalist Styles
+**/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --strong-cyan: hsl(171, 66%, 44%);
+    --light-blue: hsl(233, 100%, 69%);
+    --dark-grayish-blue: hsl(210, 10%, 33%);
+    --grayish-blue: hsl(201, 11%, 66%);
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Bai Jamjuree',
+    sans-serif;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.container {
+    padding: 3rem 1rem;
+}
+
+/**
+* ! Typography
+**/
+
+h1,h2,h3,h4{
+    color: var(--dark-grayish-blue);
+    margin: 1rem 0;
+    font-weight: 800;
+}
+
+p{
+    color: var(--grayish-blue);
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+section img{
+    margin: 2rem 0;
+}
+
+/**
+* ! Button Styles
+**/
+
+.btn-group{
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+button{
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 2rem;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.25s ease;
+}
+
+button:hover{
+    opacity: 0.7;
+}
+
+.btn-ios{
+    background-color: var(--strong-cyan);
+    box-shadow: 5px 0px 10px 5px rgb(200, 247, 247);
+}
+
+.btn-mac{
+    background-color: var(--light-blue);
+    box-shadow: 5px 0px 10px 5px rgb(223, 223, 241);
+}
+
+/**
+* ! Header Styles
+**/
+
+header{
+    background-image: url("./images/bg-header-mobile.png");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+    text-align: center;
+}
+
+.logo{
+    width: 110px;
+    margin-bottom: 3rem;
+}
+
+/**
+* ! SectionA Styles
+**/
+
+.sectionA{
+    text-align: center;
+}
+
+/**
+* ! SectionB Styles
+**/
+
+.sectionB{
+    text-align: center;
+}
+
+/**
+* ! SectionC Styles
+**/
+
+.sectionC {
+    text-align: center;
+}
+
+.sectionC .card{
+    margin-bottom: 1rem;
+}
+
+.sectionC .card img {
+    width: 60px;
+    margin-bottom: 0;
+}
+
+/**
+* ! Customers Section Styles
+**/
+
+.customers-section .container{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.customers-section img{
+    width: 130px;
+}
+
+/**
+* ! Advertisement Styles
+**/
+
+.advertisement{
+    text-align: center;
+}
+
+/**
+* ! Footer Styles
+**/
+
+footer{
+    background-color:#F5F6F8 ;
+}
+
+footer .container .logo{
+    width: 60px;
+}
+
+footer .container .social img{
+    width: 20px;
+}
+
+footer a{
+    text-decoration: none;
+    color: var(--grayish-blue);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+footer a:hover{
+    color: var(--strong-cyan);
+}
+
+footer .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+footer .container .links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .container .links .links-grp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+}
+
+svg :hover {
+    fill: var(--strong-cyan);
+}
+
+/**
+* ! Media Queries
+**/
+
+@media (min-width:768px){
+
+    body{
+        font-size: 15px;
+    }
+
+    .container{
+        padding: 3rem 4rem;
+    }
+
+    header{
+        background-image: url("./images/bg-header-desktop.png");
+    }
+
+
+    .btn-group{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .sectionA-bottom{
+        display: flex;
+    }
+
+    .sectionA-bottom-left{
+        margin-left: -100px;
+    }
+
+    .sectionA-bottom-right{
+        text-align: left;
+        margin-left: 30px;
+    }
+
+    .workflow-cards{
+        display: flex;
+        justify-content: center;
+    }
+
+    .card{
+        height: 290px;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .customers-section .container img {
+        width: 100px;
+    }
+
+
+    .customers-section .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    footer .container{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    footer .container .links{
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    footer .container .links .links-grp{
+        align-items: flex-start;
+    }
+}
